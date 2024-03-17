@@ -1,4 +1,4 @@
-function createCounter(n: number): () => number {
+export function createCounter(n: number): () => number {
   let count: number;
   return function () {
     if (count === undefined) {
@@ -10,7 +10,7 @@ function createCounter(n: number): () => number {
   };
 }
 
-const counter = createCounter(-3);
+const counter = createCounter(-2);
 console.log(counter());
 console.log(counter());
 console.log(counter());
